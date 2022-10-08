@@ -4,8 +4,8 @@ import System.IO
 import Data.Char
 import Data.List
 
-import Game
-import Level
+import Assets
+import Data
 
 main :: IO ()
 main = do
