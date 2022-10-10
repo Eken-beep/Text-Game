@@ -8,4 +8,4 @@ import Assets
 import Data
 
 main :: IO ()
-main = putStrLn "Start"
+main = print initialState

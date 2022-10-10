@@ -3,8 +3,16 @@ module Assets where
 import Data
 
 -- Initial gamestate to load
-initialState = GameState 100 [] level0
-level0 = Level 1 Village 1
+initialState = GameState { playerHp     = 100 
+                         , inventory    = [] 
+                         , level        = level0 
+                         , monster      = Data.Nothing 
+                         , playerDmg    = 1 
+                         , playerWeapon = bat}
+
+level0 = Level { num        = 1 
+               , astetic    = Village
+               , difficulty = 1 }
                          
 -- Different weapons
 -- Starter weapon

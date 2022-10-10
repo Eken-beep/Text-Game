@@ -8,7 +8,7 @@ type Items = [Item]
 type Weapon = (String, String, Int,       Int)
 
 -- Monster def (Name,   Tags,   Hp,  Dmg)
-data Monster = Just (String, String, Int, Int) | Nothing
+data Monster = Just (String, String, Int, Int) | Nothing deriving (Show)
 
 -- The main game state definition
 data GameState = GameState { playerHp     :: Int
@@ -16,10 +16,12 @@ data GameState = GameState { playerHp     :: Int
                            , level        :: Level
                            , monster      :: Monster
                            , playerDmg    :: Int
-                           , playerWeapon :: Weapon }
+                           , playerWeapon :: Weapon 
+                           } deriving (Show)
 
 -- The different places you can be at
-data Astetics = Village | Plain | Forest | City
+data Astetics = Village | Plain | Forest | City deriving (Show)
 data Level = Level { num        :: Int
                    , astetic    :: Astetics
-                   , difficulty :: Int }
+                   , difficulty :: Int 
+                   } deriving (Show)
