@@ -11,7 +11,8 @@ type Weapon = (String, String, Int,       Int)
 data Monster = Just (String, String, Int, Int) | Nothing deriving (Show)
 
 -- The main game state definition
-data GameState = GameState { playerHp     :: Int
+data GameState = GameState { playerName   :: String
+                           , playerHp     :: Int
                            , inventory    :: Items
                            , level        :: Level
                            , monster      :: Monster
